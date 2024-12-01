@@ -1,6 +1,3 @@
-
-1/.idea/
-
-1/node_modules/
-
-1/pnpm-lock.yaml
+*/.idea/
+*/node_modules/
+*/pnpm-lock.yaml
