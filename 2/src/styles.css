@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Color+Emoji&display=swap');
+
+body {
+    font-family: Lobster, sans-serif;
+    background-image: url(https://images3.alphacoders.com/994/994706.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+header {
+    text-shadow: 2px 2px 8px #7a0f15;
+    font-size: 40px
+}
+
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    padding: 25px 15px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+footer {
+    font-size: 20px
+}
+
+.snowflakes {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+    height: 0;
+}
+
+.snowflakes span {
+    animation: fall 5s linear infinite;
+    font-size: 24px;
+    margin: 0;
+    flex: 1;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
