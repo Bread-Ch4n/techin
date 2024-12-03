@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <title>2</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #b1e6f0;
+        --secondary-color: #8ab5ee;
+        --glow: hsla(190, 68%, 82%, 0.2);
+      }
+
+      @keyframes glow_flicker {
+        0%,
+        100% {
+          box-shadow: 0 0 300px 300px var(--glow);
+        }
+        50% {
+          box-shadow: 0 0 200px 200px var(--glow);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img
+        alt="christmas tree"
+        height="256px"
+        src="images/box-open.png"
+        style="margin-bottom: 20px"
+        width="256px"
+      />
+
+      <button onclick="location.href = 'index.html';">🎁 Go Back 🎁</button>
+    </section>
+    <footer>Made with 💖 for the holiday season</footer>
+    <div class="glow"></div>
+  </body>
+</html>

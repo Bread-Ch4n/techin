@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Color+Emoji&display=swap');
+
+:root {
+    --primary-color: #FCD787;
+    --secondary-color: #D92E46;
+    --glow: hsla(41, 95%, 76%, 0.2);
+    --background-primary: #11111b;
+}
+
+body {
+    font-family: Lobster, sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    background-color: var(--background-primary);
+}
+
+header {
+    text-shadow: 2px 2px 8px #E3970E;
+    font-size: 40px
+}
+
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 25px 15px;
+    border-radius: 10px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    font-size: 20px;
+    color: lightgray;
+}
+
+.glow {
+    border-radius: 50%;
+    box-shadow: 0 0 300px 300px var(--glow);
+    position: absolute;
+    z-index: -1;
+    animation: glow_flicker 5s ease-in-out infinite;
+}
+
+@keyframes glow_flicker {
+    0%, 100%, 30%, 60% {
+        box-shadow: 0 0 300px 300px var(--glow)
+    }
+    10%, 50%, 90% {
+        box-shadow: 0 0 300px 200px var(--glow)
+    }
+}
+
+@property --rotation {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 90deg;
+}
+
+button {
+    border: 2px solid var(--primary-color);
+    color: white;
+    padding: 10px 60px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    background: var(--background-primary);
+}
+
+button:hover {
+    animation: button_hover 2.5s ease-in-out infinite;
+}
+
+@keyframes button_hover {
+    0%, 100% {
+        border: 2px solid var(--primary-color);
+    }
+    50% {
+        border: 2px solid var(--secondary-color);
+    }
+}
+
+.star {
+    border-radius: 50%;
+    box-shadow: 0 0 30px 10px #FCD787;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
