@@ -1,0 +1,105 @@
+:root {
+  --green: #01b007;
+  --yellow: #feed00;
+  --brown: #542e01;
+}
+
+.container
+  :is(
+    .row1,
+    .row2,
+    .row3,
+    .row4,
+    .row5,
+    .row6,
+    .row7,
+    .row8,
+    .row9,
+    .row10,
+    .row11
+  ) {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 10px;
+  padding-top: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background-color: #b7b7b7;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cell {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.container {
+  counter-reset: cell-counter;
+}
+
+.cell {
+  counter-increment: cell-counter;
+  animation-delay: calc(0.05s * var(--index));
+}
+
+.cell {
+  aspect-ratio: 1;
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.row1 > :nth-child(6),
+.row2 > :nth-child(6),
+.row3 > :nth-child(5),
+.row3 > :nth-child(7),
+.row4 > :nth-child(n + 4):nth-child(-n + 6),
+.row4 > :nth-child(8),
+.row5 > :nth-child(n + 4):nth-child(-n + 8),
+.row6 > :nth-child(n + 3):nth-child(-n + 5),
+.row6 > :nth-child(n + 7):nth-child(-n + 9),
+.row7 > :nth-child(n + 2):nth-child(-n + 3),
+.row7 > :nth-child(n + 5):nth-child(-n + 9),
+.row8 > :nth-child(n + 2):nth-child(-n + 4),
+.row8 > :nth-child(n + 6):nth-child(-n + 7),
+.row8 > :nth-child(n + 9):nth-child(-n + 10),
+.row9 > :nth-child(1),
+.row9 > :nth-child(n + 3):nth-child(-n + 9),
+.row9 > :nth-child(11),
+.row10 > :nth-child(n + 1):nth-child(-n + 3),
+.row10 > :nth-child(n + 5):nth-child(-n + 6),
+.row10 > :nth-child(n + 8):nth-child(-n + 11) {
+  background-color: var(--green);
+}
+
+.row3 > :nth-child(6),
+.row4 > :nth-child(7),
+.row6 > :nth-child(6),
+.row7 > :nth-child(4),
+.row7 > :nth-child(10),
+.row8 > :nth-child(5),
+.row8 > :nth-child(8),
+.row9 > :nth-child(2),
+.row9 > :nth-child(10),
+.row10 > :nth-child(4),
+.row10 > :nth-child(7) {
+  background-color: var(--yellow);
+}
+
+.row11 > :nth-child(n + 5):nth-child(-n + 7) {
+  background-color: var(--brown);
+}
