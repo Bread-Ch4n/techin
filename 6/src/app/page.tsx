@@ -25,7 +25,7 @@ export default function Home() {
           <div
             className={"absolute top-1/2 text-black text-9xl -translate-y-1/2"}
           >
-            {date.getDay()}
+            {date.getDate()}
           </div>
           <div className={"absolute bottom-2 text-gray-500"}>
             {date.getFullYear()}

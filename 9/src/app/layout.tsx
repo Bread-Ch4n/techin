@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={pacifico.className}>{children}</body>
+      <body className={`overflow-hidden ${pacifico.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
