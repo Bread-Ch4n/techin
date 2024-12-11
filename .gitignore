@@ -4,5 +4,5 @@
 *eslintrc.json
 *.gitignore
 
-
 *.sqlite
+*package-lock.json
