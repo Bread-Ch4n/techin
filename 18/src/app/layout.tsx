@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Pacifico } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 
-const pacifico = Pacifico({
+const notoSans = Noto_Sans({
   weight: "400",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "9",
-  description: "Day 9",
+  title: "18",
+  description: "Day 18",
 };
 
 export default function RootLayout({
@@ -19,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`overflow-hidden ${pacifico.className}`}>
+      <body
+        className={`overflow-hidden ${notoSans.className}`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

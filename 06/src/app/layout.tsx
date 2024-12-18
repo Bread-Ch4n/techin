@@ -8,8 +8,8 @@ const pacifico = Pacifico({
 });
 
 export const metadata: Metadata = {
-  title: "4",
-  description: "Day 4",
+  title: "6",
+  description: "Day 6",
 };
 
 export default function RootLayout({
