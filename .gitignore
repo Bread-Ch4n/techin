@@ -6,3 +6,5 @@
 
 *.sqlite
 *package-lock.json
+
+19/input.txt
